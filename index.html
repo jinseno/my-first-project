@@ -2,43 +2,67 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>我的个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的高级个人空间</title>
     <style>
-        /* 这里是控制样式的“魔法” */
+        /* 高级玩法 1：动态渐变背景 */
         body { 
-            background-color: #e3f2fd; /* 浅蓝色背景 */
-            font-family: "Microsoft YaHei", sans-serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
         }
-        .container {
-            background: white;
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 高级玩法 2：毛玻璃卡片效果 */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             padding: 40px;
             border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
             text-align: center;
+            max-width: 400px;
+            color: white;
         }
+
+        /* 高级玩法 3：图片悬浮发光 */
         img { 
-            width: 260px; 
+            width: 100%;
+            max-width: 280px;
             border-radius: 20px;
-            border: 5px solid #bbdefb;
-            transition: transform 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        img:hover { transform: scale(1.05); } /* 鼠标放上去图片会变大一点 */
-        h1 { color: #1976d2; margin-top: 20px; }
-        p { color: #666; }
+
+        img:hover { 
+            transform: translateY(-10px) rotate(3deg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        h1 { font-size: 2em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        .badge { background: #fff; color: #e73c7e; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.8em; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1> 欢迎来到我的私人网页</h1>
-        <p>这是我用 GitHub + HTML 亲手打造的第一个作品</p>
+    <div class="glass-card">
+        <span class="badge">GITHUB 创作者</span>
+        <h1> 欢迎来到我的空间</h1>
+        <p>探索代码的艺术，记录学习的瞬间。</p>
         <img src="微信图片_20250707174505.jpg">
+        <p style="margin-top: 20px; opacity: 0.8;">这是我用 HTML+CSS 打造的第 1 个高级页面</p>
     </div>
 </body>
 </html>
-
