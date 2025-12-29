@@ -2,37 +2,43 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>我的个人空间</title>
+    <title>我的个人主页</title>
     <style>
-        /* 这里可以修改背景颜色和文字排版 */
+        /* 这里是控制样式的“魔法” */
         body { 
-            background-color: #f0f2f5; 
+            background-color: #e3f2fd; /* 浅蓝色背景 */
             font-family: "Microsoft YaHei", sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 50px;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
         }
-        .card {
+        .container {
             background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             text-align: center;
         }
         img { 
-            width: 300px; 
-            border-radius: 15px;
-            margin-top: 20px;
+            width: 260px; 
+            border-radius: 20px;
+            border: 5px solid #bbdefb;
+            transition: transform 0.3s;
         }
-        h1 { color: #1a73e8; }
+        img:hover { transform: scale(1.05); } /* 鼠标放上去图片会变大一点 */
+        h1 { color: #1976d2; margin-top: 20px; }
+        p { color: #666; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1> 欢迎来到我的个人网页</h1>
-        <p>这是我亲手用代码搭建的第一个站点！</p>
+    <div class="container">
+        <h1> 欢迎来到我的私人网页</h1>
+        <p>这是我用 GitHub + HTML 亲手打造的第一个作品</p>
         <img src="微信图片_20250707174505.jpg">
     </div>
 </body>
 </html>
+
